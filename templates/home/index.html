@@ -1,0 +1,665 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Weeb Workshop</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/favicon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Orelega+One&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-clock d-flex align-items-center ms-4"><span> Spent hours - over 9000! </span></i>
+      </div>
+
+      <div class="languages d-none d-md-flex align-items-center">
+        <ul>
+          <li><a href="https://myanimelist.net/" target="_blank"><img src = "{% static 'assets/img/japan.png' %}" style = "width:40px;height:26px;"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-cente">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">Weeb Workshop</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#menu">Ratings</a></li>
+          <li><a class="nav-link scrollto" href="#events">Songs</a></li>
+          <li><a class="nav-link scrollto" href="#testimonials">Quotes</a></li>
+          <li><a class="nav-link scrollto" href="#gallery">Simp Section</a></li>
+          <li><a class="nav-link scrollto" href="#chefs">Studios</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'poll' %}">Poll</a></li>
+          <li class="dropdown"><a href="#"><span>Websites</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Manga Websites</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="https://www.viz.com/read">VIZ Manga</a></li>
+                  <li><a href="https://www.crunchyroll.com/comics/manga">Crunchyroll</a></li>
+                  <li><a href="https://mangakakalot.com/">Mangakakalot</a></li>
+                  <li><a href="https://manganelo.tv/">Manganelo</a></li>
+                  <li><a href="https://www.comixology.com/">Comixology</a></li>
+                </ul>
+              </li>
+              <li><a href="https://www1.gogoanime.ai/">Gogo Anime</a></li>
+              <li><a href="https://animepahe.com/">animepahe</a></li>
+              <li><a href="https://9anime.city/">9Anime</a></li>
+              <li><a href="https://www.animefreak.tv/home/latest-episodes">AnimeFreak</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <a href="#menu" class="book-a-table-btn scrollto d-none d-lg-flex">Start Today!</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1 font-family: 'Heebo', sans-serif;><span>Konnichiwa!</span></h1>
+        </div>
+        <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
+          <a href="https://www.youtube.com/watch?v=Tlwda9S58Lg" class="glightbox play-btn"></a>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+            <div class="about-img">
+              <img src="{% static 'assets/img/about.jpg' %}" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>Mangas and Animes -<br> the new Popular<br><br></h3>
+            <p class="fst-italic">In recent times, animes and mangas are reaching heights of popularity. The younger generations in particular have shown quite love to mangas and animes as clear from this Google Trends comparison of a popular TV series to that of anime in recent times.
+            </p>
+            <a href="https://trends.google.com/trends/explore?q=%2Fm%2F01hryy,%2Fm%2F0524b41" target="_blank" title="Naruto vs GOT"><br><br><div class="Trends"><u> Naruto vs Game of Thrones in terms of Google searches!</u></div></a>
+          </div>
+          
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+    
+    <!-- ======= Menu Section ======= -->
+    <section id="menu" class="menu section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>MAL Ratings</h2>
+          <p>Start Today!</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="menu-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-action">Action</li>
+              <li data-filter=".filter-thriller">Thriller</li>
+              <li data-filter=".filter-adventure">Adventure</li>
+              <li data-filter=".filter-comedy">Comedy</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-6 menu-item filter-adventure">
+            <img src="{% static 'assets/img/menu/img-1.jfif' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="https://myanimelist.net/anime/21/One_Piece">One Piece</a><span><b>{{One_Piece}}</b></span>
+            </div>
+            <div class="menu-ingredients">
+              Luffy, Zoro, Nami, Sanji
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-adventure filter-comedy">
+            <img src="{% static 'assets/img/menu/img-2.png' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="https://myanimelist.net/anime/918/Gintama">Gintama</a><span><b>{{Gintama}}</b></span>
+            </div>
+            <div class="menu-ingredients">
+              Gintoki, Katsura, Elizabeth, Kagura
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-action">
+            <img src="{% static 'assets/img/menu/img-3.png' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="https://myanimelist.net/anime/813/Dragon_Ball_Z">Dragon Ball Z</a><span><b>{{Dragon_Ball_Z}}</b></span>
+            </div>
+            <div class="menu-ingredients">
+              Goku, Vegeta, Bulma, Frieza
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-action filter-thriller">
+            <img src="{% static 'assets/img/menu/img-4.png' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_Season_Part_2">Attack on Titan</a><span><b>{{Attack_on_Titan}}</b></span>
+            </div>
+            <div class="menu-ingredients">
+              Eren, Levi, Armin, Mikasa
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-comedy">
+            <img src="{% static 'assets/img/menu/img-5.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="https://myanimelist.net/anime/37105/Grand_Blue">Grand Blue</a><span><b>{{Grand_Blue}}</b></span>
+            </div>
+            <div class="menu-ingredients">
+              Iori, Kouhei, Chisa, Aina
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-thriller">
+            <img src="{% static 'assets/img/menu/img-6.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="https://myanimelist.net/anime/1535/Death_Note">Death Note</a><span><b>{{Death_Note}}</b></span>
+            </div>
+            <div class="menu-ingredients">
+              Light, L, Ryuk, Misa
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-action filter-adventure">
+            <img src="{% static 'assets/img/menu/img-7.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011">Hunter x Hunter</a><span><b>{{Hunter_x_Hunter}}</b></span>
+            </div>
+            <div class="menu-ingredients">
+              Gon, Killua, Meriam, Hisoka
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-adventure">
+            <img src="{% static 'assets/img/menu/img-8.jfif' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood">Full Metal Alchemist: Brotherhood</a><span><b>{{Full_Metal_Alchemist__Brotherhood}}</b></span>
+            </div>
+            <div class="menu-ingredients">
+              Edward, Alphonse, Winry, Mustang
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-action">
+            <img src="{% static 'assets/img/menu/img-9.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="https://myanimelist.net/anime/20/Naruto">Naruto</a><span><b>{{Naruto}}</b></span>
+            </div>
+            <div class="menu-ingredients">
+              Naruto, Sasuke, Sakura, Kakashi
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-thriller">
+            <img src="{% static 'assets/img/menu/img-10.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="https://myanimelist.net/anime/9253/Steins_Gate">Steins;Gate</a><span><b>{{Steins_Gate}}</b></span>
+            </div>
+            <div class="menu-ingredients">
+              Rintarou, Kurisu, Mayuri, Itaru
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Menu Section -->
+    
+    <!-- ======= Events Section ======= -->
+    <section id="events" class="events">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Songs</h2>
+          <p>Can't live without em </p>
+        </div>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>    
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class = "MP">
+                <div class= "player">
+                  <div class="imgBx">
+                    <img src="{% static 'assets\img\audio-img\img-1.jpg' %}">
+                  </div>
+                  <audio controls>
+                    <source src="{% static 'assets\audio\audio-1.mp3' %}", type="audio/mp3">
+                  </audio>
+                  <b><p>Tokyo Ghoul</p></b> 
+                </div>
+              </div>
+            </div>
+    
+            <div class="carousel-item">
+              <div class = "MP">
+                <div class= "player">
+                  <div class="imgBx">
+                    <img src="{% static 'assets\img\audio-img\img-2.jpg' %}">
+                  </div>
+                  <audio controls>
+                    <source src="{% static 'assets\audio\audio-2.mp3' %}", type="audio/mp3">
+                  </audio>
+                  <b><p>Cowboy Bebop</p></b>
+                </div>
+              </div>
+    
+            </div>
+            <div class="carousel-item">
+              <div class = "MP">
+                <div class= "player">
+                  <div class="imgBx">
+                    <img src="{% static 'assets\img\audio-img\img-3.jpg' %}">
+                  </div>
+                  <audio controls>
+                    <source src="{% static 'assets\audio\audio-3.mp3' %}", type="audio/mp3">
+                  </audio>
+                  <b><p>Pokemon</p></b> 
+                </div>
+              </div>
+            </div>
+    
+            <div class="carousel-item">
+              <div class = "MP">
+                <div class= "player">
+                  <div class="imgBx">
+                    <img src="{% static 'assets\img\audio-img\img-4.jpg' %}">
+                  </div>
+                  <audio controls>
+                    <source src="{% static 'assets\audio\audio-4.mp3' %}", type="audio/mp3">
+                  </audio>
+                  <b><p>Death Note</p></b>
+                </div>
+              </div>
+            </div>
+    
+            <div class="carousel-item">
+              <div class = "MP">
+                <div class= "player">
+                  <div class="imgBx">
+                    <img src="{% static 'assets\img\audio-img\img-5.jpg' %}">
+                  </div>
+                  <audio controls>
+                    <source src="{% static 'assets\audio\audio-5.mp3' %}", type="audio/mp3">
+                  </audio>
+                  <b><p>Full Metal Alchemist: Brotherhood</p></b>
+                </div>
+              </div>
+            </div>
+    
+            <div class="carousel-item">
+              <div class = "MP">
+                <div class= "player">
+                  <div class="imgBx">
+                    <img src="{% static 'assets\img\audio-img\img-6.jpg' %}">
+                  </div>
+                  <audio controls>
+                    <source src="{% static 'assets\audio\audio-6.mp3' %}", type="audio/mp3">
+                  </audio>
+                  <b><p>Demon Slayer</p></b> 
+                </div>
+              </div>
+            </div>
+    
+            <div class="carousel-item">
+              <div class = "MP">
+                <div class= "player">
+                  <div class="imgBx">
+                    <img src="{% static 'assets\img\audio-img\img-7.jpg' %}">
+                  </div>
+                  <audio controls>
+                    <source src="{% static 'assets\audio\audio-7.mp3' %}", type="audio/mp3">
+                  </audio>
+                  <b><p>Attack on Titan</p></b> 
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class = "MP">
+                <div class= "player">
+                  <div class="imgBx">
+                    <img src="{% static 'assets\img\audio-img\img-8.jpg' %}">
+                  </div>
+                  <audio controls>
+                    <source src="{% static 'assets\audio\audio-8.mp3' %}", type="audio/mp3">
+                  </audio>
+                  <b><p>Your Lie in April</p></b> 
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <button class="carousel-control-prev carousel-control" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next carousel-control" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+   
+    </section><!-- End Events Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Quotes</h2>
+          <p>Preach!</p>
+        </div>
+
+        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  "Fear is freedom! Subjugation is liberation! Contradiction is truth! Those are the facts of this world! And you will all surrender to them, you pigs in human clothing!" 
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i><br><br><br>
+                </p>
+                <img src="{% static 'assets\img\quotes\img-1.jpg' %}" class="testimonial-img" alt="">
+                <h3>Satsuki Kiryuuin</h3>
+                <h4>Kill La Kill</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  "I’m Not Fighting Because I Want To Win, I’m Fighting Because I Have To Win."
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i><br><br><br><br><br>
+                </p>
+                <img src="{% static 'assets\img\quotes\img-2.jpg' %}" class="testimonial-img" alt="">
+                <h3>Ichigo Kurosaki</h3>
+                <h4>Bleach</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  "I see now that the circumstances of one's birth are irrelevant; it is what you do with the gift of life that determines who you are."
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i><br><br><br><br>
+                </p>
+                <img src="{% static 'assets\img\quotes\img-3.png' %}" class="testimonial-img" alt="">
+                <h3>Mewtwo</h3>
+                <h4>Pokemon</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  "I love heroes, but I don't want to be one. Do you even know what a hero is!? For example, you have some meat. Pirates will feast on the meat, but the hero will distribute it among the people! I want to eat the meat!"
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i><br><br>
+                </p>
+                <img src="{% static 'assets\img\quotes\img-4.jpg' %}" class="testimonial-img" alt="">
+                <h3>Monkey D. Luffy</h3>
+                <h4>One Piece</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  "Even though a hedgehog may want to become close with another hedgehog. The closer they get the more they injure each other with their spines. It's the same with some humans. The reason [Shinji] seems so withdrawn is because he's afraid of being hurt."
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="{% static 'assets\img\quotes\img-5.jpg' %}" class="testimonial-img" alt="">
+                <h3>Ritsuko Akagi<h3>
+                <h4>Neon Genesis Evangelion</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Simp Section</h2>
+          <p>Who you got?</p>
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/gallery-1.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/gallery-1.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/gallery-2.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/gallery-2.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/gallery-3.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/gallery-3.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/gallery-4.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/gallery-4.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/gallery-5.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/gallery-5.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/gallery-6.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/gallery-6.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/gallery-7.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/gallery-7.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/gallery-8.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/gallery-8.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+    <!-- ======= Chefs Section ======= -->
+    <section id="chefs" class="chefs">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Studios</h2>
+          <p>The Providers</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="100">
+              <img src="{% static 'assets/img/studio/studio-1.jpg' %}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>MAPPA</h4>
+                  <span>AoT:Final Seasons, Jujutsu Kaisen, Terror in Resonance</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+              <img src="{% static 'assets/img/studio/studio-2.jpg' %}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>WIT</h4>
+                  <span>Attack on Titan, Vinland Saga, The Great Pretender</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="300">
+              <img src="{% static 'assets/img/studio/studio-3.jpg' %}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>UFOTABLE</h4>
+                  <span>Demon Slayer, The Fate Series, Garden of Sinners</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Chefs Section -->
+
+    
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3 >Weeb WorkShop</h3><h5>By Vidit Nayal</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

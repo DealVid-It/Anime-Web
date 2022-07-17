@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{% static 'assets/poll-style.css' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      a {
+        background: #f1670b;
+        position: inherit;
+      }
+      body {
+        background-image: url("{% static 'assets/stay.jpg' %}");
+      }
+
+      .brand-logo {
+        background: url("{% static 'assets/chibi.jpg' %}");
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="brand-logo"></div>
+      <div class="brand-title"><br />Invalid Response!</div>
+      <br />
+      <button>
+        <a href="{% url 'home' %}">Home</a>
+      </button>
+      <button>
+        <a href="{% url 'poll' %}">Poll</a>
+      </button>
+    </div>
+  </body>
+</html>

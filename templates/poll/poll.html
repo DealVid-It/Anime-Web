@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{% static 'assets/poll-style.css' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-image: url("{% static 'assets/stay.jpg' %}");
+      }
+
+      .brand-logo {
+        background: url("{% static 'assets/chibi.jpg' %}");
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="brand-logo"></div>
+      <div class="brand-title">POLL TIME!</div>
+      <div class="inputs">
+        <form action="{% url 'thanks' %}" method="post">
+          {% csrf_token %}
+          <label>Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Your Name (Kimi no Na wa xD)"
+          />
+
+          <label>Favourite Anime</label>
+          <input
+            type="text"
+            name="anime"
+            id="anime"
+            placeholder="I know...tough to choose one :("
+          />
+          <div class="radio-btns">
+            <input type="radio" id="Sub" name="subORdub" value="SUB" />
+            <label for="Sub" id="SubLabel">Sub</label><br />
+            <input
+              type="radio"
+              id="Dub"
+              name="subORdub"
+              value="DUB"
+              checked="checked"
+            />
+            <label for="Dub" id="DubLabel">Dub</label><br />
+          </div>
+          <button type="submit" value="Submit">Press Me Senpai ;p</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
